@@ -5,6 +5,7 @@ import withRouter from '../components/withrouter.component';
 import WebHead from '../components/webhead.component';
 import Header from "../components/header.component";
 import Footer from "../components/footer.component";
+import Slider from "../components/slider.component";
 // import Sidebar from "../components/sidebar.component";
 // import PostCard from "../components/postcard.component";
 
@@ -47,9 +48,12 @@ class HomePage extends React.Component {
         return (
             <>
                 <WebHead headInsiders={this.state.head_insiders} />
-                <Header />
+                <Header selected="home" />
                 <div className="container-fluid">
                     <div className="row">
+                        <div className="col-12">
+                            <Slider/>
+                        </div>
                         {/* <Sidebar styles="col-md-3 bg-light col-lg-2" selected="home" /> */}
                         <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                             <h4 className="my-4">Dashboard</h4>
