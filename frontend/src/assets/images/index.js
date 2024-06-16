@@ -4,6 +4,12 @@ import Slider2 from './slider2.webp';
 import Slider3 from './slider3.gif';
 import Slider4 from './slider4.webp';
 import Slider5 from './slider5.webp';
+import ClubVelvete from './club_velvete.svg';
+import ComboOffer from './combo.webp';
+import offer1 from './offer1.gif';
+import offer2 from './offer2.webp';
+import refer from './refer.webp';
+import footer_logo from './footer-logo.svg';
 
 const SliderImages = [
     Slider1,
@@ -11,9 +17,19 @@ const SliderImages = [
     Slider3,
     Slider4,
     Slider5
-]
+];
+
+const OfferImages = [
+    offer1,
+    offer2
+];
 
 export {
     HeaderLogo,
-    SliderImages
+    SliderImages,
+    ClubVelvete,
+    ComboOffer,
+    OfferImages,
+    refer,
+    footer_logo
 };

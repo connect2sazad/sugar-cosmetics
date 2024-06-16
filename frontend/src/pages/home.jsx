@@ -6,8 +6,10 @@ import WebHead from '../components/webhead.component';
 import Header from "../components/header.component";
 import Footer from "../components/footer.component";
 import Slider from "../components/slider.component";
-// import Sidebar from "../components/sidebar.component";
-// import PostCard from "../components/postcard.component";
+import ProductsSlider from "../components/products-slider.component";
+import { ClubVelvete, featured_banner, refer } from "../assets/images";
+import CombosSlider from "../components/combos-slider.component";
+import OfferSlider from "../components/offer-slider.component";
 
 class HomePage extends React.Component {
 
@@ -52,26 +54,61 @@ class HomePage extends React.Component {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12">
-                            <Slider/>
+                            <Slider />
                         </div>
-                        {/* <Sidebar styles="col-md-3 bg-light col-lg-2" selected="home" /> */}
-                        <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                            <h4 className="my-4">Dashboard</h4>
-                            <div className="task-posts-container row">
-                                {
-                                    this.state.posts.length > 0
-                                        ? this.state.posts.map((post, index) => (
-                                            <div className="col-md-4 mb-4" key={index}>
-                                                {/* <PostCard post={post} /> */}
-                                            </div>
-                                        ))
-                                        : <p>No posts available</p>
-                                }
-                                
+                        <div className="col-12 p-0">
+                            <ProductsSlider heading="best sellers" />
+                            <ProductsSlider heading="exclusive range launch" background="bg-dark" />
+
+                            <div className="container-fluid px-4 my-5 pb-5">
+                                <div class="seprated-heading pt-5 mt-5">CLUB VELLVETTE</div>
+                                <div className="row offer-bg py-5" style={{letterSpacing:"2px"}}>
+                                    <div className="col-1"></div>
+                                    <div className="col-2">
+                                        <img src={ClubVelvete} alt="Club Velvete" style={{ height: "200px" }} />
+                                    </div>
+                                    <div className="col-1"></div>
+                                    <div className="col-7 d-flex justify-content-center flex-column">
+                                        <h2 className="text-white fw-bold">
+                                            Buy @ ₹299 for 6 months
+                                        </h2>
+                                        <h2 className="text-white">
+                                            Save 20% EXTRA + FREE Shipping
+                                        </h2>
+                                        <h3 className="text-danger fw-bold">
+                                            JOIN NOW
+                                        </h3>
+                                    </div>
+                                    <div className="col-1"></div>
+                                </div>
                             </div>
-                        </main>
+
+                            <ProductsSlider heading="MAKEUP KITS & COMBOS" background="bg-dark" />
+
+                            <CombosSlider heading="EXCLUSIVE COMBO LAUNCHES" />
+
+                            <OfferSlider heading="EXCLUSIVE TREATS" />
+
+                            <CombosSlider heading="HOT DEALS" />
+                            
+                            <div className="container-fluid px-4 my-5">
+                                <div class="seprated-heading pt-5 mt-5">REFER YOUR FRIENDS</div>
+                                <div className="row mt-4">
+                                    <div className="col-12">
+                                    <img src={refer} alt="Refer Friends" style={{width: "100%"}} />
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ProductsSlider heading="SKINCARE BASICS" />
+                            
+                            <CombosSlider heading="SUGAR BEAUTY BLOG" />
+
+                        </div>
                     </div>
                 </div>
+
                 <Footer />
             </>
         );
