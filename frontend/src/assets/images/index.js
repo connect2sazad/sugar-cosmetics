@@ -10,6 +10,9 @@ import offer1 from './offer1.gif';
 import offer2 from './offer2.webp';
 import refer from './refer.webp';
 import footer_logo from './footer-logo.svg';
+import playstore from './playstore.png';
+import applestore from './apple-store.png';
+import lipgloss from './lip-gloss.webp';
 
 const SliderImages = [
     Slider1,
@@ -31,5 +34,8 @@ export {
     ComboOffer,
     OfferImages,
     refer,
-    footer_logo
+    footer_logo,
+    playstore,
+    applestore,
+    lipgloss,
 };

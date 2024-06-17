@@ -57,3 +57,19 @@ a{
   color: white;
   text-decoration: none;
 }
+
+a:hover{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays on top of other content */
+}
+
+.body-padding {
+  padding-top: 120px; /* Adjust based on the height of your fixed header */
+}

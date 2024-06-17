@@ -5,6 +5,7 @@ import { FaHeart, FaStar } from 'react-icons/fa';
 // Import Swiper styles
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
+import { lipgloss } from '../assets/images';
 
 const ProductsSlider = ({ heading, background="" }) => {
 
@@ -46,7 +47,7 @@ const ProductCard = () => {
   return (
     <>
       <div className="card" style={{ width: "18rem" }}>
-        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Ffiles%2F599125845-01.jpg%3Fv%3D1711208074&w=256&q=75" className="card-img-top" alt="..." />
+        <img src={lipgloss} className="card-img-top" alt="Lip Gloss" />
         <div className="card-body">
           <h6 className="card-title text-center">SUGAR Play Mega Hype Colour Changing Lip Oil</h6>
           <p className="text-muted text-center">6 Shades</p>

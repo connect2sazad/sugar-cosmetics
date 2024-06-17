@@ -1,27 +1,62 @@
 export const menus = [
     {
-        id: "home",
-        name: "Home",
-        link: "/",
+        id: "sugar-play",
+        name: "sugar play",
+        link: "/sugar-play",
     },
     {
-        id: "new-post",
-        name: "New Post",
-        link: "/new-post",
+        id: "lips",
+        name: "lips",
+        link: "/lips",
     },
     {
-        id: "profile",
-        name: "Profile",
-        link: "/profile",
+        id: "eyes",
+        name: "eyes",
+        link: "/eyes",
     },
     {
-        id: "settings",
-        name: "Settings",
-        link: "/settings",
+        id: "face",
+        name: "face",
+        link: "/face",
     },
     {
-        id: "logout",
-        name: "Logout",
-        link: "/logout",
+        id: "nails",
+        name: "nails",
+        link: "/nails",
+    },
+    {
+        id: "skincare",
+        name: "skincare",
+        link: "/skincare",
+    },
+    {
+        id: "accessories",
+        name: "accessories",
+        link: "/accessories",
+    },
+    {
+        id: "gifting",
+        name: "gifting",
+        link: "/gifting",
+    },
+    {
+        id: "best-sellers",
+        name: "best sellers",
+        link: "/best-sellers",
+    },
+    {
+        id: "new-launches",
+        name: "new launches",
+        link: "/new-launches",
+    },
+    {
+        id: "offers",
+        name: "offers",
+        link: "/offers",
+    },
+    {
+        id: "blog",
+        name: "blog",
+        link: "/blog",
     },
 ]
