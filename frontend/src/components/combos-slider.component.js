@@ -1,6 +1,5 @@
 // import Swiper core
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FaHeart, FaStar } from 'react-icons/fa';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -13,7 +12,7 @@ const CombosSlider = ({ heading, background="" }) => {
 
   return (
     <div className={`container-fluid px-4 my-5 pb-5 ${background}`}>
-      <div class={`seprated-heading pt-5 my-5 ${text_white}`}>{heading}</div>
+      <div className={`seprated-heading pt-5 my-5 ${text_white}`}>{heading}</div>
       <Swiper
         spaceBetween={30}
         slidesPerView={3}

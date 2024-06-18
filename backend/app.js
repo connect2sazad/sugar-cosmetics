@@ -1,14 +1,16 @@
 const express = require('express');
+const cors = require('cors');
 const sequelize = require('./models');
-const userRoutes = require('./routes/userRoutes');
-const productRoutes = require('./routes/productRoutes');
+const routes = require('./routes'); // Import central routes file
 require('dotenv').config();
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
-app.use('/api/users', userRoutes);
-app.use('/api/products', productRoutes);
+
+// Use the central routes file
+app.use('/api', routes);
 
 const PORT = process.env.PORT || 7777;
 

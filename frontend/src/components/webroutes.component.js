@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 
 import HomePage from '../pages/home';
-// import LoginPage from '../pages/login';
+import LoginPage from '../pages/login';
 // import ProfilePage from '../pages/profile';
 // import LogoutPage from '../pages/logout';
 // import NewPostPage from '../pages/newpost';
@@ -19,14 +19,10 @@ const routes = [
         page: <HomePage/>,
         link: '/posts'
     },
-    // {
-    //     page: <NewPostPage/>,
-    //     link: '/new-post'
-    // },
-    // {
-    //     page: <LoginPage/>,
-    //     link: '/login'
-    // },
+    {
+        page: <LoginPage/>,
+        link: '/login'
+    },
     // {
     //     page: <ProfilePage/>,
     //     link: '/profile'
