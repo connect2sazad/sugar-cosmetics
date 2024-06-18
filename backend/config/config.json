@@ -1,0 +1,10 @@
+{
+    "development": {
+      "username": "root",
+      "password": "",
+      "database": "sugar_cosmetics",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    }
+  }
+  
