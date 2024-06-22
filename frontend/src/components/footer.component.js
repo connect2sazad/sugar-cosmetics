@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { applestore, footer_logo, playstore } from "../assets/images";
 import { FaEnvelope, FaFacebookF, FaInstagram, FaPinterest, FaTumblr, FaTwitter, FaYoutube } from "react-icons/fa";
+import { Email, Facebook, Instagram, Pinterest, Tumblr, Twitter, Youtube } from "./constants.component";
 
 const Footer = () => {
     return (
@@ -15,25 +16,25 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="col-12 text-center text-white">
-                        <Link className="btn btn-outline-light btn-floating m-1" to="#" role="button">
+                        <Link className="btn btn-outline-light btn-floating m-1" to={Facebook} role="button">
                             <FaFacebookF />
                         </Link>
-                        <Link className="btn btn-outline-light btn-floating m-1" to="#" role="button">
+                        <Link className="btn btn-outline-light btn-floating m-1" to={Tumblr} role="button">
                             <FaTumblr />
                         </Link>
-                        <Link className="btn btn-outline-light btn-floating m-1" to="#" role="button">
+                        <Link className="btn btn-outline-light btn-floating m-1" to={Twitter} role="button">
                             <FaTwitter />
                         </Link>
-                        <Link className="btn btn-outline-light btn-floating m-1" to="#" role="button">
+                        <Link className="btn btn-outline-light btn-floating m-1" to={Youtube} role="button">
                             <FaYoutube />
                         </Link>
-                        <Link className="btn btn-outline-light btn-floating m-1" to="#" role="button">
+                        <Link className="btn btn-outline-light btn-floating m-1" to={Instagram} role="button">
                             <FaInstagram />
                         </Link>
-                        <Link className="btn btn-outline-light btn-floating m-1" to="#" role="button">
+                        <Link className="btn btn-outline-light btn-floating m-1" to={`mailto:${Email}`} role="button">
                             <FaEnvelope />
                         </Link>
-                        <Link className="btn btn-outline-light btn-floating m-1" to="#" role="button">
+                        <Link className="btn btn-outline-light btn-floating m-1" to={Pinterest} role="button">
                             <FaPinterest />
                         </Link>
                     </div>

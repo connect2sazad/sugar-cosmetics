@@ -42,8 +42,8 @@ class LoginPage extends React.Component {
         event.preventDefault(); // Prevent default form submission behavior
         try {
             const res = await login(this.state.data);
-            localStorage.setItem('token',res.token);
-            localStorage.setItem('auth',btoa(res.email))
+            localStorage.setItem('token', res.token);
+            localStorage.setItem('auth', btoa(res.email))
             this.props.navigate(`/`);
         } catch (e) {
             console.error(e);
@@ -60,34 +60,21 @@ class LoginPage extends React.Component {
                         <div className="col-4"></div>
                         <div className="col-4">
                             <form onSubmit={this.login}>
-                                <div className="form-group">
+                                <div className="form-floating mb-3">
+                                    <input type="email" className="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email"
+                                        value={this.state.data.email} onChange={this.handleInputChange} aria-describedby="emailHelp" required />
                                     <label htmlFor="exampleInputEmail1">Email address</label>
-                                    <input
-                                        type="email"
-                                        className="form-control"
-                                        id="exampleInputEmail1"
-                                        name="email"
-                                        aria-describedby="emailHelp"
-                                        placeholder="Enter email"
-                                        value={this.state.data.email}
-                                        onChange={this.handleInputChange}
-                                    />
                                     <small id="emailHelp" className="form-text text-muted">
                                         We'll never share your email with anyone else.
                                     </small>
                                 </div>
-                                <div className="form-group mt-3">
+                                <div className="form-floating mb-3">
+                                    <input type="password" className="form-control" id="exampleInputPassword1" name="password" placeholder="Password"
+                                        value={this.state.data.password} onChange={this.handleInputChange} required />
                                     <label htmlFor="exampleInputPassword1">Password</label>
-                                    <input
-                                        type="password"
-                                        className="form-control"
-                                        id="exampleInputPassword1"
-                                        name="password"
-                                        placeholder="Password"
-                                        value={this.state.data.password}
-                                        onChange={this.handleInputChange}
-                                    />
                                 </div>
+
+
                                 <button type="submit" className="btn btn-primary mt-4">
                                     Submit
                                 </button>

@@ -2,9 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import HomePage from '../pages/home';
 import LoginPage from '../pages/login';
-// import ProfilePage from '../pages/profile';
-// import LogoutPage from '../pages/logout';
-// import NewPostPage from '../pages/newpost';
+import CollectionsPage from '../pages/collections';
 
 const routes = [
     {
@@ -16,8 +14,8 @@ const routes = [
         link: '/home'
     },
     {
-        page: <HomePage/>,
-        link: '/posts'
+        page: <CollectionsPage/>,
+        link: '/:collections'
     },
     {
         page: <LoginPage/>,
