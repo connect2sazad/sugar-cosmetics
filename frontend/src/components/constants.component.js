@@ -8,7 +8,7 @@ export const AuthorURL = "https://www.github.com/connect2sazad";
 export const Keywords = ["Best Site", "Best Site 2", "Best Site 3"];
 export const Description = 'Test Description';
 
-export const PORT = 7777;
+export const PORT = 4555;
 
 export const token = localStorage.getItem('sweet-token');
 export const user = localStorage.getItem('sweet-user');

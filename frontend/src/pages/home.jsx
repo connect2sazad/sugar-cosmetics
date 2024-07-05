@@ -9,7 +9,7 @@ import ProductsSlider from "../components/products-slider.component";
 import { ClubVelvete, refer } from "../assets/images";
 import CombosSlider from "../components/combos-slider.component";
 import OfferSlider from "../components/offer-slider.component";
-import { getAllProducts } from "../services/products.service";
+import { PRODUCT_SERVICE } from "../services/products.service";
 
 class HomePage extends React.Component {
 
@@ -33,7 +33,7 @@ class HomePage extends React.Component {
     fetchProducts = async () => {
 
         try {
-            const products = await getAllProducts();
+            const products = await PRODUCT_SERVICE.getAllProducts();
 
             // console.log(products);
             this.setState({

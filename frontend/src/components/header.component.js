@@ -14,8 +14,11 @@ const Header = ({ selected }) => {
 
     useEffect(() => {
         
+        const auth = localStorage.getItem('auth');
+        const current_user = auth === null ? '' : atob(auth);
         setToken(localStorage.getItem('token'));
-        setUser(atob(localStorage.getItem('auth')));
+        setUser(current_user);
+        // console.log(auth);
 
     }, [user, navigate, token]);
 

@@ -7,9 +7,15 @@ const getAllProducts = async () => {
 
     const response = await axios.get(endpoint);
 
+    // console.log(response);
+
     return response.data;
 }
 
-export {
+const PRODUCT_SERVICE = {
     getAllProducts
+}
+
+export {
+    PRODUCT_SERVICE
 };

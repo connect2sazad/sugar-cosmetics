@@ -3,7 +3,7 @@ import withRouter from '../components/withrouter.component';
 import WebHead from '../components/webhead.component';
 import Header from '../components/header.component';
 import Footer from '../components/footer.component';
-import { login } from '../services/users.service';
+import { USER_SERVICE } from '../services/users.service';
 
 class LoginPage extends React.Component {
 
@@ -41,12 +41,14 @@ class LoginPage extends React.Component {
     login = async (event) => {
         event.preventDefault(); // Prevent default form submission behavior
         try {
-            const res = await login(this.state.data);
+            const res = await USER_SERVICE.login(this.state.data);
             localStorage.setItem('token', res.token);
             localStorage.setItem('auth', btoa(res.email))
             this.props.navigate(`/`);
         } catch (e) {
-            console.error(e);
+            this.setState({
+                message: e.response.data.message
+            })
         }
     }
 
@@ -74,8 +76,9 @@ class LoginPage extends React.Component {
                                     <label htmlFor="exampleInputPassword1">Password</label>
                                 </div>
 
+                                <div className="text-muted">{this.state.message}</div>
 
-                                <button type="submit" className="btn btn-primary mt-4">
+                                <button type="submit" className="btn btn-primary btn-dark mt-4">
                                     Submit
                                 </button>
                             </form>
