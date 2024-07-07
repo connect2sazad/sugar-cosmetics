@@ -9,6 +9,23 @@ const USERS_QUERY = {
     create : "INSERT INTO `users` (`username`, `email`, `password`) VALUES (?, ?, ?)",
 }
 
+// menus
+const MENUS_QUERY = {
+    all_menus : "SELECT * FROM `menus` WHERE `menus`.`is_deleted` = 0"
+}
+
+// wishlist
+const WISHLIST_QUERY = {
+    add : "INSERT INTO `wishlist` (`user_id`, `product_id`) VALUES (?, ?)",
+    remove : "DELETE FROM `wishlist` WHERE `wishlist`.`id` = ?"
+}
+
+// cart
+const CART_QUERY = {
+    add : "INSERT INTO `cart` (`user_id`, `product_id`) VALUES (?, ?)",
+    remove : "DELETE FROM `cart` WHERE `wishlist`.`id` = ?"
+}
+
 
 
 
@@ -17,5 +34,8 @@ const USERS_QUERY = {
 
 module.exports = {
     PRODUCTS_QUERY,
-    USERS_QUERY
+    USERS_QUERY,
+    MENUS_QUERY,
+    WISHLIST_QUERY,
+    CART_QUERY
 }

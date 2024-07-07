@@ -4,13 +4,14 @@ import { FaHeart, FaShoppingCart, FaUser } from 'react-icons/fa';
 import { ImExit } from "react-icons/im";
 
 import { HeaderLogo } from "../assets/images";
-import { menus } from "./menus.component";
+import { MENU_SERVICE } from "../services/menus.service";
 
 const Header = ({ selected }) => {
 
     const [user, setUser] = useState('');
     const navigate = useNavigate('');
     const [token, setToken] = useState('');
+    const [menus, setMenus] = useState([]);
 
     useEffect(() => {
         
@@ -20,7 +21,18 @@ const Header = ({ selected }) => {
         setUser(current_user);
         // console.log(auth);
 
-    }, [user, navigate, token]);
+        const populate_menus = async () => {
+            try{
+                const nav_menus = await MENU_SERVICE.getAllMenus();
+                setMenus(nav_menus);
+            } catch(error){
+                console.error(error);
+            }
+        }
+
+        populate_menus();
+
+    }, [user, navigate, token, menus]);
 
     const logout = () => {
         localStorage.removeItem('token');
@@ -75,7 +87,7 @@ const Header = ({ selected }) => {
                         <ul className="navbar-nav p-0 m-0">
                             {menus.map((menu) => (
                                 <li className="nav-item py-1 px-1" key={menu.id}>
-                                    <Link to={menu.link} className={`nav-link ${menu.id === selected ? 'active' : 'link-dark'}`} aria-current="page">
+                                    <Link to={`/${menu.link}`} className={`nav-link ${menu.id === selected ? 'active' : 'link-dark'}`} aria-current="page">
                                         {menu.name}
                                     </Link>
                                 </li>
